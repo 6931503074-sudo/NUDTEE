@@ -67,11 +67,11 @@ See `/docs` for the full SRS, ERD, sequence diagram, and wireframes.
 
 | Name | Student ID | Role |
 |------|-----------|------|
-| Suratsawadee Areerob | 6931503119 | |
-| Thanyarat Ainpasat | 6931503107 | |
-| Ninmanee Nualsee | 6931503050 | |
-| Rawisara Palang | 6931503065 | |
-| Sirawit Kansuwan | 6931503074 | |
+| Suratsawadee Areerob | 6931503119 | FR-3 Join / leave session |
+| Thanyarat Ainpasat | 6931503107 | FR-4 Filter by genre |
+| Ninmanee Nualsee | 6931503050 | FR-5 Realtime sync + integration lead |
+| Rawisara Palang | 6931503065 | FR-2 Genre profile tags |
+| Sirawit Kansuwan | 6931503074 | FR-1 Create session |
 
 ## AI usage
 
