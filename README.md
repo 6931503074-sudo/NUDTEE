@@ -39,7 +39,7 @@ Out of scope for this MVP: map/GPS view, waitlist, notifications, ratings/review
 - [x] data model
 - [x] Sequence diagram (join + realtime broadcast flow)
 - [x] UI wireframes
-- [ ] Clickable prototype covering every Must FR (M3)
+- [x] Clickable prototype covering every Must FR (M3)
 - [ ] Final report + Golden Thread table (M3)
 - [ ] Demo slides
 - [x] AI-use statement
@@ -51,7 +51,10 @@ Out of scope for this MVP: map/GPS view, waitlist, notifications, ratings/review
 git clone <repo-url>
 cd NUDTEE
 
-# No install needed — just open index.html in your browser 
+# No install needed — just open index.html in your browser
+
+## Demo
+Live prototype: https://nudtee-3f5b7.web.app/
 
 ``` 
 
