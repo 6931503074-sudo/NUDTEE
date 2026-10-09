@@ -36,13 +36,13 @@ Out of scope for this MVP: map/GPS view, waitlist, notifications, ratings/review
 - [x] Problem statement, users, MVP scope (M1)
 - [x] SRS: FR-1–FR-5, NFRs, use cases (M2)
 - [x] Use case diagram
-- [ ] ERD / data model
-- [ ] Sequence diagram (join + realtime broadcast flow)
-- [ ] UI wireframes → hi-fi mockups
+- [x] data model
+- [x] Sequence diagram (join + realtime broadcast flow)
+- [x] UI wireframes
 - [ ] Clickable prototype covering every Must FR (M3)
 - [ ] Final report + Golden Thread table (M3)
 - [ ] Demo slides
-- [ ] AI-use statement
+- [x] AI-use statement
 
 ## Getting started
 
