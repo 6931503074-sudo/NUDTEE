@@ -27,3 +27,7 @@
 | *Player* | id, display name, favorite genres (list) | organizes many Sessions; has many Participations | Set favorite genres (FR-2) |
 | *Session* | id, organizer (Player), genre, location, scheduled time, min players, max players, status | belongs to one organizing Player; has many Participations | Create session (FR-1), Filter sessions (FR-4), Broadcast update (FR-5) |
 | *Participation* | session (Session), player (Player), joined-at | belongs to one Session and one Player | Join session (FR-3), Leave session (FR-3) |
+
+## Why three tiers
+
+Separating these keeps each concern replaceable on its own: the presentation layer could be rebuilt in a different framework without touching how capacity is calculated. The application logic layer holds the one piece of real decision logic in this app — the capacity check (FR-3) and the realtime sync (FR-5) — independently of whichever database eventually stores the data. No specific database, framework, or library is named in this document on purpose; that choice belongs in a separate, replaceable implementation note.
