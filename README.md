@@ -40,8 +40,8 @@ Out of scope for this MVP: map/GPS view, waitlist, notifications, ratings/review
 - [x] Sequence diagram (join + realtime broadcast flow)
 - [x] UI wireframes
 - [x] Clickable prototype covering every Must FR (M3)
-- [ ] Final report + Golden Thread table (M3)
-- [ ] Demo slides
+- [x] Final report + Golden Thread table (M3)
+- [x] Demo slides
 - [x] AI-use statement
 
 ## Getting started
