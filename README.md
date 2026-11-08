@@ -1,81 +1,79 @@
 # NUDTEE
 
-A real-time board game meetup coordination app. Built for Intro to Software Engineering (15031001), Academic Year 2569.
+A real-time activity meetup coordination web app. Built for Intro to Software Engineering (15031001), Academic Year 2569.
 
 ## The problem
 
-Board game players who want to find more people to play with especially people who enjoy the same genre currently rely on manual back-and-forth in LINE or Facebook groups. Existing groups don't show what genre each member enjoys, so organizers invite the wrong people, and there's no live number showing how many players a session still needs, so organizers must ask around one by one. This wastes time and often means a session never comes together even though enough interested players existed.
+General activity scheduling often suffers from unclear timing and participant requirements. Critical details such as the location and schedule get buried in LINE or Facebook group chats, leading to confusion and forgotten appointments, and organizers have no live count of how many spots are still open, so they must ask around and recount by hand. This wastes time and often means a session falls apart even though enough interested people exist.
 
 ## Who it's for
 
-- **Players** who already belong to a group but can't easily find others who like the same genre
-- **Session organizers** who need the right number and the right kind of players without asking one by one in chat
-- **Newcomers** with no existing friend group, who have no way to see what sessions are open
+- **Organizers** who need to fill a session with the right number of people without recounting RSVPs in chat
+- **Participants** who want clear dates, times, and locations, a live view of open spots, and a reminder in their own calendar
 
 ## Core features (MVP)
 
-| FR | Feature |
-|----|---------|
-| FR-1 | Create a session (genre, location, date/time, player count) |
-| FR-2 | Set favorite game genres on your profile |
-| FR-3 | Join / leave a session, with live remaining-spot count |
-| FR-4 | Filter sessions by genre |
-| FR-5 | Real-time session list — updates within 2 seconds, no refresh |
+| FR | Feature | Priority |
+|----|---------|----------|
+| FR-1 | Create / edit a session (title, pinned map location, date/time, min/max players, closing time) | Must |
+| FR-2 | Join / leave a session, with live remaining-spot count | Must |
+| FR-3 | Real-time session status — updates within 2 seconds, no refresh | Must |
+| FR-4 | Display a session's location on an interactive map | Must |
+| FR-5 | In-room chat (session participants only) | Should |
+| FR-6 | Auto-close — joining is blocked once the closing time passes | Must |
+| FR-7 | Add a joined session to Google Calendar | Must |
 
-Out of scope for this MVP: map/GPS view, waitlist, notifications, ratings/reviews, café booking integration, in-app chat.
+Out of scope for this MVP: waitlist, push notifications and reminders, ratings and reviews, venue booking and payments, friend lists and 1-on-1 messaging, genre tagging and filtering.
 
 ## Tech stack
 
-- **Frontend:** [HTML/CSS/JS]
-- **Backend / database / auth / realtime:** [Supabase](https://supabase.com) (free tier)
-- **Hosting:** Vercel / Netlify (free tier)
-- **Login:** Google OAuth
+- **Frontend:** HTML/CSS/JS
+- **Map:** Leaflet + OpenStreetMap tiles
+- **Backend / database / realtime:** [Supabase](https://supabase.com) (free tier)
+- **Login and calendar:** Google OAuth, Google Calendar API
+- **Hosting:** [confirm: Firebase Hosting / Vercel / Netlify] (free tier)
 
 ## Project status
 
-- [x] Problem statement, users, MVP scope (M1)
-- [x] SRS: FR-1–FR-5, NFRs, use cases (M2)
-- [x] Use case diagram
-- [x] data model
-- [x] Sequence diagram (join + realtime broadcast flow)
-- [x] UI wireframes
-- [x] Clickable prototype covering every Must FR (M3)
-- [x] Final report + Golden Thread table (M3)
-- [x] Demo slides
-- [x] AI-use statement
+- [x] Team Charter (revised for the general meetup scope)
+- [x] SRS: FR-1–FR-7, NFRs, use cases (revised)
+- [x] Sequence diagrams (draft)
+- [ ] Use case diagram (update for UC-1–UC-6)
+- [ ] Architecture and data model (update)
+- [ ] UI wireframes / design
+- [ ] Clickable prototype covering every Must FR
+- [ ] Final report + Golden Thread table
+- [ ] Demo slides
+- [ ] AI-use statement (new version)
 
 ## Getting started
 
-```bash
+bash
 # clone the repo
-git clone <repo-url>
+git clone https://github.com/6931503074-sudo/NUDTEE.git
 cd NUDTEE
 
 # No install needed — just open index.html in your browser
 
-## Demo
-Live prototype: https://nudtee-3f5b7.web.app/
-
-``` 
-
 ## Data model
 
-- **users** — id, display_name, favorite_genres
-- **sessions** — id, organizer_id, genre, location, scheduled_at, min_players, max_players, status
-- **session_participants** — session_id, user_id, joined_at (the join table FR-3/FR-5 compute the live count from)
+- **users** — id, display_name, google_account_id
+- **sessions** — id, organizer_id, title, latitude, longitude, scheduled_at, closing_time, min_players, max_players, status (open / full / closed)
+- **session_participants** — session_id, user_id, joined_at (the join table FR-2/FR-3 compute the live count from)
+- **messages** — id, session_id, sender_id, body, sent_at (in-room chat)
 
-See `/docs` for the full SRS, ERD, sequence diagram, and wireframes.
+See /Docs for the SRS, diagrams, and design documents.
 
 ## Team
 
 | Name | Student ID | Role |
 |------|-----------|------|
-| Suratsawadee Areerob | 6931503119 | FR-3 Join / leave session |
-| Thanyarat Ainpasat | 6931503107 | FR-4 Filter by genre |
-| Ninmanee Nualsee | 6931503050 | FR-5 Realtime sync + integration lead |
-| Rawisara Palang | 6931503065 | FR-2 Genre profile tags |
-| Sirawit Kansuwan | 6931503074 | FR-1 Create session |
+| Suratsawadee Areerob | 6931503119 | TBD |
+| Thanyarat Ainpasat | 6931503107 | TBD |
+| Ninmanee Nualsee | 6931503050 | TBD |
+| Rawisara Palang | 6931503065 | TBD |
+| Sirawit Kansuwan | 6931503074 | TBD |
 
 ## AI usage
 
-This project used Claude to help draft the problem statement, SRS, FR/NFR list, ERD, sequence diagram, and wireframes. Every AI-drafted piece was reviewed and adjusted by the team.
+This project used Claude to help draft the problem statement, SRS, FR/NFR list, and diagrams, and to review them. Every AI-drafted piece was reviewed and adjusted by the team. See the AI-use statement in `/Docs`.
