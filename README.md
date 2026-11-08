@@ -38,9 +38,9 @@ Out of scope for this MVP: waitlist, push notifications and reminders, ratings a
 - [x] Team Charter (revised for the general meetup scope)
 - [x] SRS: FR-1–FR-7, NFRs, use cases (revised)
 - [x] Sequence diagrams (draft)
-- [ ] Use case diagram (update for UC-1–UC-6)
+- [x] Use case diagram (update for UC-1–UC-6)
 - [ ] Architecture and data model (update)
-- [ ] UI wireframes / design
+- [x] UI wireframes / design
 - [ ] Clickable prototype covering every Must FR
 - [ ] Final report + Golden Thread table
 - [ ] Demo slides
