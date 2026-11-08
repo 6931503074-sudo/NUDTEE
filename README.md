@@ -21,7 +21,7 @@ General activity scheduling often suffers from unclear timing and participant re
 | FR-4 | Display a session's location on an interactive map | Must |
 | FR-5 | In-room chat (session participants only) | Should |
 | FR-6 | Auto-close — joining is blocked once the closing time passes | Must |
-| FR-7 | Add a joined session to Google Calendar | Must |
+| FR-7 | Add a joined session to Google Calendar | Should |
 
 Out of scope for this MVP: waitlist, push notifications and reminders, ratings and reviews, venue booking and payments, friend lists and 1-on-1 messaging, genre tagging and filtering.
 
