@@ -79,7 +79,7 @@ All services stay within free usage limits.
 ```bash
 # clone the repo
 git clone https://github.com/6931503074-sudo/NUDTEE1.git
-cd NUDTEE1
+cd NUDTEE1 https://nudtee-e329d.web.app/
 
 # No install needed: just open index.html in your browser
 ```
