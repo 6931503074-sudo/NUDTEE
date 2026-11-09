@@ -67,12 +67,12 @@ All services stay within free usage limits.
 - [x] SRS
 - [x] Sequence diagrams
 - [x] Use case diagram
-- [ ] Architecture and data model (update)
+- [x] Architecture and data model (update)
 - [x] UI wireframes / design
-- [ ] Clickable prototype covering every Must FR
-- [ ] Final report + Golden Thread table
+- [x] Clickable prototype covering every Must FR
+- [x] Final report + Golden Thread table
 - [ ] Demo slides
-- [ ] AI-use statement (new version)
+- [x] AI-use statement (new version)
 
 ## Getting started
 
