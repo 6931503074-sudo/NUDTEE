@@ -21,9 +21,9 @@ General activity scheduling often suffers from unclear timing and participant re
 | FR-2 | Join / leave a session, with live remaining-spot count | Must |
 | FR-3 | Real-time session status, updates within 2 seconds with no refresh | Must |
 | FR-4 | Display a session's location on an interactive map | Must |
-| FR-5 | In-room chat (session participants only) | Should |
+| FR-5 | In-room chat (session participants only) | Must |
 | FR-6 | Auto-close: joining is blocked once registration closes (end of the deadline day, or the session start time, whichever comes first) | Must |
-| FR-7 | Add a joined session to Google Calendar (pre-filled event link) | Should |
+| FR-7 | Add a joined session to Google Calendar (pre-filled event link) | Must |
 
 Lightweight extras (Could, no dedicated FR or acceptance test this term): category filter, user profile page, session cover image, online sessions with meeting link, time-overlap check, organizer tools (remove participant, close room), "use my current location", share-link button, Thai/English language menu.
 
